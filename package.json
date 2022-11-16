@@ -1,0 +1,14 @@
+{
+  "name": "cson-to-json5",
+  "main": "index.js",
+  "dependencies": {
+    "coffeescript": "^2.7.0"
+  },
+  "devDependencies": {
+    "cson-parser": "^4.0.9",
+    "json5": "^2.2.1"
+  },
+  "scripts": {
+    "test": "node test/run.js"
+  }
+}

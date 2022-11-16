@@ -1,0 +1,37 @@
+string: 'te\nst'
+multilineString: '''
+    string
+    with
+    multiple \
+    lines
+  '''
+deep: nested: object: with: "comment" # test
+singleLineArray: [1,2,3, "four"]
+multiLineArray: [
+  -1
+  null
+  10e+8 # random comment
+  # Infinity and NaN are supported by json5 but not by the cson parser so they are not included
+  0xfff
+  also: an: 'object'
+]
+objectLikeJson: {
+  "could": "be",
+  "JSON": 1,
+  ###
+    multiline comments cause
+    errors in a few places
+  ###
+  "Array": [
+    {
+      "key": "value"
+    },
+    "string"
+  ]
+}
+###
+
+  space!
+
+###
+BUG: "multiline comments at the end of the file don't work"
